@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Layered 4D-Rotor Gaussian Splatting: a compressed representation for long dynamic scenes.">
+  <meta name="keywords" content="4D Gaussian Splatting, dynamic scenes, novel view synthesis, Layered 4D-Rotor">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layered 4D-Rotor Gaussian Splatting | Project Page</title>
+
+  <!-- Google Analytics 已按官方 README 建议移除；若需统计请自行接入 -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title publication-title publication-title-two-lines">
+            <span class="publication-title-line">Layered 4D-Rotor Gaussian Splatting:</span>
+            <span class="publication-title-line">A Compressed Representation for Long Dynamic Scenes</span>
+          </h1>
+          <div class="is-size-5 publication-authors publication-authors-row">
+            <span class="author-block">Hanjie Xu<sup class="author-sup">1*</sup></span>
+            <span class="author-block">Yuanxing Duan<sup class="author-sup">2*</sup></span>
+            <span class="author-block">
+              <a href="https://daiqy.github.io/" target="_blank" rel="noopener noreferrer">Qiyu Dai</a><sup class="author-sup">1*</sup>
+            </span>
+            <span class="author-block">Ge Li<sup class="author-sup">1†</sup></span>
+            <span class="author-block">
+              <a href="https://baoquanchen.info/" target="_blank" rel="noopener noreferrer">Baoquan Chen</a><sup class="author-sup">1,3†</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://hughw19.github.io/" target="_blank" rel="noopener noreferrer">He Wang</a><sup class="author-sup">1,2†</sup>
+            </span>
+          </div>
+
+          <div class="publication-authors publication-affil-legend is-size-6">
+            <p class="author-legend-line author-legend-units">
+              <span><sup class="legend-sup">1</sup> Peking University</span>
+              <span class="author-legend-gap"><sup class="legend-sup">2</sup> Galbot</span>
+              <span class="author-legend-gap"><sup class="legend-sup">3</sup> State Key Laboratory of General Artificial Intelligence</span>
+            </p>
+            <p class="author-legend-line author-legend-notes rainygs-legend-notes">
+              <span><sup class="legend-sup">*</sup> equal contributions, <sup class="legend-sup">†</sup> corresponding author</span>
+            </p>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- 不开源：占位展示 -->
+              <span class="link-block">
+                <span class="button is-normal is-rounded is-dark coming-soon-code"
+                      role="status"
+                      title="Code coming soon"
+                      aria-label="Code coming soon">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming soon)</span>
+                </span>
+              </span>
+            </div>
+
+            <p class="has-text-centered publication-venue-rainygs">
+              <a href="https://cvpr.thecvf.com/Conferences/2026" target="_blank" rel="noopener noreferrer">CVPR 2026</a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video class="video-salmon" poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/flame_salmon_ours.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video class="video-salmon" poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/flame_salmon_small.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video class="video-salmon" poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/free_salmon.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video class="video-bike" poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/bike_60_ours.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video class="video-bike" poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/bike_60_small.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video class="video-bike" poster="" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/free_bike.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column abstract-narrow">
+        <h2 class="title is-3">Abstract</h2>
+        <img src="./static/images/teaser.png" class="teaser-image" alt="Teaser figure">
+        <div class="content has-text-justified">
+          <p>
+            We consider the problem of reconstructing long dynamic scenes from multi-view videos in a storage-efficient manner. Recent advances in Gaussian Splatting and its extensions to dynamic scenes have demonstrated impressive visual quality, but remain limited to short duration (&lt;10 s), large storage size (&gt;500 MB), and high GPU VRAM usage. To overcome these limitations, we introduce <strong>Layered 4D-Rotor Gaussian Splatting</strong>, a novel compressed representation designed for long dynamic scenes. Our approach integrates a layered 4D representation, efficient training, and effective compression into a unified framework. Specifically, 4D Gaussians are first organized into layers based on their temporal extents and then partitioned into discrete temporal buckets. This structure allows for selective access and rendering of only the necessary subsets of 4D Gaussians, substantially reducing GPU memory requirements. To further compress the representation, we apply a series of techniques, Factorized Covariance Quantization, Layered Compression, and Residual Codebook Quantization, achieving a compression ratio of up to 22.3× while preserving high visual fidelity. We implement a highly optimized C++/CUDA framework for efficient training, compression, and real-time rendering, achieving over 500 FPS on an RTX 3090 GPU. Extensive experiments demonstrate the superior storage efficiency, visual quality, and rendering speed of our method, consistently outperforming prior methods in both quantitative metrics and perceptual quality on real-world long dynamic scenes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <!-- Overview：与 Abstract 同宽（container + abstract-narrow） -->
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column abstract-narrow">
+        <h2 class="title is-3">Overview</h2>
+
+        <div class="overview-block has-text-left">
+          <h3 class="title is-4">Training pipeline</h3>
+          <img src="./static/images/training.png"
+               class="overview-figure"
+               alt="Training pipeline overview.">
+          <div class="content has-text-justified">
+            <p>
+              To train massive, long-duration dynamic scenes without exceeding GPU memory limits, we propose a highly efficient Triple-Buffer Training Framework comprising a CPU bucket buffer and a GPU double buffer. During each training iteration, gradient updates and adaptive density control (i.e., splitting and cloning) are performed exclusively on the active subset of 4D Gaussians currently residing in the GPU render buffer. At the end of each step, a data transfer occurs: newly visible Gaussians are loaded from the CPU, while those unused for several steps are offloaded. Crucially, to completely bypass the severe latency caused by dynamic memory allocation (cudaMalloc) during these continuous transfers, our framework smoothly alternates between the two GPU buffers. Furthermore, to stabilize the optimization of static background regions across thousands of frames, we introduce a Dynamic-Aware Rotor Learning Rate (DARLR), which adaptively scales the temporal rotor learning rate based on each Gaussian's temporal extent.
+            </p>
+          </div>
+        </div>
+
+        <div class="overview-block has-text-left">
+          <h3 class="title is-4">Layering and compression</h3>
+          <img src="./static/images/layer.png"
+               class="overview-figure"
+               alt="Layering and compression overview.">
+          <div class="content has-text-justified">
+            <p>
+              To efficiently manage and compress highly dynamic long videos, we organize 4D Gaussians into a hierarchical layer-bucket structure, dynamically assigning each primitive based on its temporal scale τ and mean time t to prevent artificial time-clipping. During rendering, we only need to load the current bucket alongside its two immediate neighbors per layer. To achieve extreme storage reduction, we compress this massive representation using a tailored Vector Quantization pipeline. Since direct quantization of 4D covariances fails due to their massive dynamic range, we introduce Factorized Covariance Quantization (FCQ) to decouple the spatial and temporal components of scales and rotors before applying VQ. We then utilize layer-wise VQ to accommodate the vastly different data distributions across temporal levels, and finally employ Residual Codebook Quantization (RCQ)—learning a lightweight residual codebook to refine a global base—to capture high-frequency visual details with virtually no additional storage overhead.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column abstract-narrow">
+        <h2 class="title is-3">Real-Time Onscreen Rendering</h2>
+        <div class="columns is-mobile is-centered is-vcentered rendering-videos-row">
+          <div class="column is-half">
+            <div class="rendering-video-block">
+              <video id="rendering-onscreen-1"
+                     class="rendering-video"
+                     autoplay
+                     controls
+                     muted
+                     loop
+                     playsinline>
+                <source src="./static/videos/bike_60_ours.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="rendering-video-block">
+              <video id="rendering-onscreen-2"
+                     class="rendering-video"
+                     autoplay
+                     controls
+                     muted
+                     loop
+                     playsinline>
+                <source src="./static/videos/bike_60_ours.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column abstract-narrow">
+        <h2 class="title is-3">BibTeX</h2>
+        <div class="content has-text-left bibtex-block">
+          <pre class="bibtex-pre"><code>@misc{xu2025layered4drotor,
+  title  = {Layered {4D}-Rotor Gaussian Splatting: A Compressed Representation for Long Dynamic Scenes},
+  author = {Xu, Hanjie and Duan, Yuanxing and Dai, Qiyu and Li, Ge and Chen, Baoquan and Wang, He},
+  year   = {2026},
+  note   = {Manuscript in preparation; arXiv link to be added},
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        This website is adapted from
+        <a href="https://github.com/nerfies/nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a>.
+        Thanks for the author's great work.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

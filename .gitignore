@@ -1,0 +1,7 @@
+.DS_store
+.idea
+.vscode/
+
+# 超过 GitHub 单文件 100MB 限制；若需入库请用 Git LFS 或外链托管
+static/videos/10min.mp4
+static/videos/5min.mp4
