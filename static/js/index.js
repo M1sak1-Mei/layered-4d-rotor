@@ -7,7 +7,7 @@ $(document).ready(function() {
     });
 
     var options = {
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         slidesToShow: 3,
         loop: true,
         infinite: true,
