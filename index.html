@@ -18,13 +18,13 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css?v=20260530-2">
+  <link rel="stylesheet" href="./static/css/index.css?v=20260531-5">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/index.js?v=20260530"></script>
+  <script src="./static/js/index.js?v=20260531-3"></script>
 </head>
 <body>
 
@@ -100,28 +100,6 @@
                   <span>CVF</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=pBNrAOfIFvY"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- 不开源：占位展示 -->
-              <span class="link-block">
-                <span class="button is-normal is-rounded is-dark coming-soon-code"
-                      role="status"
-                      title="Code coming soon"
-                      aria-label="Code coming soon">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code (Coming soon)</span>
-                </span>
-              </span>
             </div>
 
             <p class="has-text-centered publication-venue-rainygs">
@@ -138,6 +116,16 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
+      <div class="embedded-youtube-video">
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/pBNrAOfIFvY"
+                  title="Layered 4D-Rotor Gaussian Splatting video"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+      <!-- Carousel videos temporarily hidden.
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <span class="video-label">Ours</span>
@@ -177,6 +165,7 @@
           </video>
         </div>
       </div>
+      -->
     </div>
   </div>
 </section>
@@ -201,6 +190,87 @@
 </section>
 
 
+<section class="section comparison-section" id="flame-salmon-comparison">
+  <div class="container comparison-container">
+    <div class="comparison-copy">
+      <p class="comparison-kicker">Flame Salmon</p>
+      <h2 class="title is-3">Full and Compact Dynamic Detail</h2>
+      <p class="comparison-lede">
+        The full representation preserves crisp flame structure and fast temporal changes, while the compact variant keeps the same scene motion with a smaller representation.
+      </p>
+      <p>
+        This view contrasts <strong>Ours</strong> with <strong>Ours Small</strong> on the same dynamic sequence, emphasizing how compression affects transient flame regions and stable background content.
+      </p>
+    </div>
+    <div class="comparison-media">
+      <div class="video-compare" data-video-compare style="--compare-pos: 50%;">
+        <video class="compare-video compare-video-base"
+               autoplay muted loop playsinline preload="metadata">
+          <source src="./static/videos/flame_salmon_small.mp4" type="video/mp4">
+        </video>
+        <div class="compare-video-overlay">
+          <video class="compare-video compare-video-top"
+                 autoplay muted loop playsinline preload="metadata">
+            <source src="./static/videos/flame_salmon_ours.mp4" type="video/mp4">
+          </video>
+        </div>
+        <span class="compare-badge compare-badge-left">Ours</span>
+        <span class="compare-badge compare-badge-right">Ours Small</span>
+        <div class="compare-divider" aria-hidden="true">
+          <span class="compare-handle"></span>
+        </div>
+        <input class="compare-slider"
+               type="range"
+               min="0"
+               max="100"
+               value="50"
+               aria-label="Compare Ours and Ours Small">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section comparison-section comparison-section-alt" id="bike-comparison">
+  <div class="container comparison-container">
+    <div class="comparison-media">
+      <div class="video-compare" data-video-compare style="--compare-pos: 50%;">
+        <video class="compare-video compare-video-base"
+               autoplay muted loop playsinline preload="metadata">
+          <source src="./static/videos/bike_60_small.mp4" type="video/mp4">
+        </video>
+        <div class="compare-video-overlay">
+          <video class="compare-video compare-video-top"
+                 autoplay muted loop playsinline preload="metadata">
+            <source src="./static/videos/bike_60_ours.mp4" type="video/mp4">
+          </video>
+        </div>
+        <span class="compare-badge compare-badge-left">Ours</span>
+        <span class="compare-badge compare-badge-right">Ours Small</span>
+        <div class="compare-divider" aria-hidden="true">
+          <span class="compare-handle"></span>
+        </div>
+        <input class="compare-slider"
+               type="range"
+               min="0"
+               max="100"
+               value="50"
+               aria-label="Compare Ours and Ours Small">
+      </div>
+    </div>
+    <div class="comparison-copy">
+      <p class="comparison-kicker">Bike</p>
+      <h2 class="title is-3">Motion Detail With a Smaller Model</h2>
+      <p class="comparison-lede">
+        The bike sequence highlights fast motion, broad camera coverage, and fine foreground structure across a long dynamic scene.
+      </p>
+      <p>
+        The slider compares <strong>Ours</strong> against <strong>Ours Small</strong>, showing how the compact representation preserves scene geometry and temporal consistency after compression.
+      </p>
+    </div>
+  </div>
+</section>
+
+
 <section class="section">
   <!-- Overview：与 Abstract 同宽（container + abstract-narrow） -->
   <div class="container">
@@ -215,7 +285,7 @@
                alt="Training pipeline overview.">
           <div class="content has-text-justified">
             <p>
-              To train massive, long-duration dynamic scenes without exceeding GPU memory limits, we propose a highly efficient Triple-Buffer Training Framework comprising a CPU bucket buffer and a GPU double buffer. During each training iteration, gradient updates and adaptive density control (i.e., splitting and cloning) are performed exclusively on the active subset of 4D Gaussians currently residing in the GPU render buffer. At the end of each step, a data transfer occurs: newly visible Gaussians are loaded from the CPU, while those unused for several steps are offloaded. Crucially, to completely bypass the severe latency caused by dynamic memory allocation (cudaMalloc) during these continuous transfers, our framework smoothly alternates between the two GPU buffers. Furthermore, to stabilize the optimization of static background regions across thousands of frames, we introduce a Dynamic-Aware Rotor Learning Rate (DARLR), which adaptively scales the temporal rotor learning rate based on each Gaussian's temporal extent.
+              To train long dynamic scenes efficiently, we introduce a Triple-buffer strategy with a GPU double buffer and a CPU bucket buffer. For each sampled timestamp, only the visible Gaussians are loaded into the GPU render buffer, while Gaussians unused for several steps are offloaded back to CPU buckets. This design reduces frequent CPU-GPU memory transfers. We also use a Dynamic-Aware Rotor Learning Rate (DARLR), which assigns smaller temporal-rotor learning rates to Gaussians with larger temporal extents, stabilizing static regions in long sequences.
             </p>
           </div>
         </div>
@@ -227,7 +297,7 @@
                alt="Layering and compression overview.">
           <div class="content has-text-justified">
             <p>
-              To efficiently manage and compress highly dynamic long videos, we organize 4D Gaussians into a hierarchical layer-bucket structure, dynamically assigning each primitive based on its temporal scale τ and mean time t to prevent artificial time-clipping. During rendering, we only need to load the current bucket alongside its two immediate neighbors per layer. To achieve extreme storage reduction, we compress this massive representation using a tailored Vector Quantization pipeline. Since direct quantization of 4D covariances fails due to their massive dynamic range, we introduce Factorized Covariance Quantization (FCQ) to decouple the spatial and temporal components of scales and rotors before applying VQ. We then utilize layer-wise VQ to accommodate the vastly different data distributions across temporal levels, and finally employ Residual Codebook Quantization (RCQ)—learning a lightweight residual codebook to refine a global base—to capture high-frequency visual details with virtually no additional storage overhead.
+              To represent long dynamic scenes efficiently, we organize 4D Gaussians into temporal layers and buckets based on their temporal extent τ and mean time μt. For each timestamp, only the current bucket and its neighboring buckets are loaded for rendering. The layered representation is then compressed using FCQ, layer-wise compression, and RCQ, which respectively factorize covariance parameters, adapt quantization to layer-specific distributions, and refine bucket-block codebooks with compact residuals.
             </p>
           </div>
         </div>
@@ -252,7 +322,7 @@
                      muted
                      loop
                      playsinline>
-                <source src="./static/videos/6e936770250481dab4a9261f3fd13a54.mp4" type="video/mp4">
+                <source src="./static/videos/6e936770250481dab4a9261f3fd13a54_h264.mp4" type="video/mp4">
               </video>
             </div>
           </div>
