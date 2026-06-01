@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css?v=20260531-5">
+  <link rel="stylesheet" href="./static/css/index.css?v=20260602-1">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -230,6 +230,7 @@
   </div>
 </section>
 
+<!-- Bike comparison slider hidden.
 <section class="section comparison-section comparison-section-alt" id="bike-comparison">
   <div class="container comparison-container">
     <div class="comparison-media">
@@ -265,6 +266,52 @@
       </p>
       <p>
         The slider compares <strong>Ours</strong> against <strong>Ours Small</strong>, showing how the compact representation preserves scene geometry and temporal consistency after compression.
+      </p>
+    </div>
+  </div>
+</section>
+-->
+
+<section class="section comparison-section comparison-section-alt" id="onscreen-rendering-feature">
+  <div class="container comparison-container">
+    <div class="onscreen-feature-media">
+      <div class="onscreen-video-panel">
+        <div class="rendering-video-block">
+          <video id="rendering-onscreen-1"
+                 class="rendering-video"
+                 autoplay
+                 controls
+                 muted
+                 loop
+                 playsinline>
+            <source src="./static/videos/6e936770250481dab4a9261f3fd13a54_h264.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="onscreen-video-caption">Interactive viewer</p>
+      </div>
+      <div class="onscreen-video-panel">
+        <div class="rendering-video-block">
+          <video id="rendering-onscreen-2"
+                 class="rendering-video"
+                 autoplay
+                 controls
+                 muted
+                 loop
+                 playsinline>
+            <source src="./static/videos/render.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="onscreen-video-caption">Onscreen rendering</p>
+      </div>
+    </div>
+    <div class="comparison-copy">
+      <p class="comparison-kicker">Real-Time Onscreen Rendering</p>
+      <h2 class="title is-3">Live Playback at Interactive Rates</h2>
+      <p class="comparison-lede">
+        The renderer streams only the active temporal buckets needed for the current timestamp, keeping long dynamic scenes responsive during playback.
+      </p>
+      <p>
+        These two clips are shown as regular video panels rather than a slider, preserving their different aspect ratios while making the real-time output easy to compare side by side.
       </p>
     </div>
   </div>
@@ -307,6 +354,7 @@
 </section>
 
 
+<!-- Original onscreen rendering section moved above Overview.
 <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
@@ -344,6 +392,7 @@
     </div>
   </div>
 </section>
+-->
 
 
 <section class="section" id="BibTeX">

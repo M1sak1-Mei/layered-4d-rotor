@@ -286,6 +286,32 @@ h1.publication-title-two-lines.title {
   background: #000;
 }
 
+.onscreen-feature-media {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(130px, 0.85fr);
+  gap: 0.85rem;
+  align-items: stretch;
+  width: 100%;
+}
+
+.onscreen-video-panel {
+  min-width: 0;
+}
+
+.onscreen-feature-media .rendering-video-block {
+  height: clamp(240px, 26vw, 380px);
+  box-shadow: 0 18px 42px rgba(17, 24, 39, 0.16);
+}
+
+.onscreen-video-caption {
+  margin-top: 0.55rem;
+  color: #4b5563;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
 /* BibTeX：与 Abstract 同宽，代码块可横向滚动 */
 .bibtex-pre {
   text-align: left;
@@ -524,6 +550,10 @@ h1.publication-title-two-lines.title {
   .comparison-copy {
     max-width: 680px;
   }
+
+  .onscreen-feature-media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 520px) {
@@ -534,6 +564,14 @@ h1.publication-title-two-lines.title {
 
   .video-compare {
     aspect-ratio: 1 / 1;
+  }
+
+  .onscreen-feature-media {
+    grid-template-columns: 1fr;
+  }
+
+  .onscreen-feature-media .rendering-video-block {
+    height: clamp(220px, 64vw, 330px);
   }
 
   .compare-badge {
